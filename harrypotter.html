@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Online Game - Official Wizarding World Adventure</title>
+    <meta name="description" content="Immerse yourself in the magical world of Harry Potter with our free online game. Cast spells, brew potions, and explore Hogwarts in this enchanting wizarding adventure.">
+    <link rel="canonical" href="https://harrrypotter.top">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --apple-blue: #007AFF;
+            --apple-gray: #F5F5F7;
+            --apple-dark: #1D1D1F;
+            --apple-green: #34C759;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: var(--apple-gray);
+            color: var(--apple-dark);
+        }
+        .header-bg {
+            background: linear-gradient(135deg, #000428, #004e92);
+        }
+        .btn-primary {
+            background-color: var(--apple-blue);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0062cc;
+            transform: translateY(-2px);
+        }
+        .game-container {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            width: 1280px;
+            max-width: 100%;
+            height: 720px;
+            margin: 0 auto;
+        }
+        .game-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        @media (max-width: 1300px) {
+            .game-container {
+                width: 96%;
+                height: calc((96vw * 9) / 16);
+                max-height: 80vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header-bg text-white py-6 md:py-12">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center mb-8">
+                <div class="text-2xl font-bold">Wizarding World</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#game" class="hover:text-gray-300">Play Game</a>
+                    <a href="#about" class="hover:text-gray-300">About</a>
+                    <a href="#features" class="hover:text-gray-300">Features</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </nav>
+            
+            <div class="text-center py-8 md:py-16">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Harry Potter: The Magical Adventure</h1>
+                <p class="text-xl md:text-2xl mb-8">Experience the wonder and excitement of the wizarding world in this immersive online game.</p>
+                <a href="#game" class="btn-primary text-white font-bold py-3 px-8 rounded-full inline-block">Play Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Game Section -->
+    <section id="game" class="py-12 md:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Enter The Wizarding World</h2>
+            
+            <div class="game-container bg-black mx-auto">
+                <iframe 
+                    src="https://harry-potter.surge.sh/" 
+                    frameborder="0"
+                    scrolling="no"
+                    allowfullscreen
+                    allow="fullscreen"
+                    title="Harry Potter Online Game">
+                </iframe>
+            </div>
+            
+            <div class="text-center mt-6">
+                <p class="text-gray-600 mb-4">Having trouble with the game? Try refreshing the page or using a different browser.</p>
+                <button id="fullscreen-btn" class="btn-primary text-white font-bold py-2 px-6 rounded-full inline-block">Fullscreen Mode</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 md:py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">About The Game</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg mb-6">
+                        Our Harry Potter online game lets you explore the magical world created by J.K. Rowling. Immerse yourself in an adventure filled with spells, potions, magical creatures, and the timeless battle between good and evil.
+                    </p>
+                    <p class="text-lg mb-6">
+                        As a student at Hogwarts School of Witchcraft and Wizardry, you'll attend classes, learn spells, make friends, and face challenges that will test your courage, intelligence, and loyalty.
+                    </p>
+                    <p class="text-lg">
+                        Whether you're a dedicated Potterhead or new to the wizarding world, this game offers an enchanting experience that captures the magic and wonder of the beloved series.
+                    </p>
+                </div>
+                <div class="bg-gray-200 p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Game Features</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Explore Hogwarts castle and grounds
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Cast spells with your wand
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Brew magical potions
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Compete in magical duels
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Interact with familiar characters
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-12 md:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Game Specifications</h2>
+            
+            <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg shadow-md">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">System Requirements</h3>
+                    <p class="mb-4">
+                        To enjoy the Harry Potter game at its best, your system should meet these requirements:
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold mb-2">Recommended:</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <span class="text-gray-700 font-medium mr-2">OS:</span>
+                                    <span>Windows 10/11, macOS 11+</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-700 font-medium mr-2">Browser:</span>
+                                    <span>Latest Chrome, Firefox or Edge</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-700 font-medium mr-2">Internet:</span>
+                                    <span>High-speed broadband</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-700 font-medium mr-2">Audio:</span>
+                                    <span>Headphones or speakers</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <h3 class="text-xl font-bold mb-4">Mobile Compatibility</h3>
+                    <p class="mb-4">
+                        Our Harry Potter game is fully responsive and playable on modern mobile devices:
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-gray-700 font-medium mr-2">iOS:</span>
+                            <span>iOS 13+ on iPhone 8 or newer</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-gray-700 font-medium mr-2">Android:</span>
+                            <span>Android 8.0+ on devices with 4GB+ RAM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Harry Potter Game</h3>
+                    <p class="text-gray-400">
+                        Experience the magic of the wizarding world with our immersive online Harry Potter game.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#game" class="text-gray-400 hover:text-white">Play Game</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white">Features</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>
+                    © 2023 Harry Potter Online Game. This is a fan-made game and is not affiliated with J.K. Rowling, 
+                    Warner Bros., or any entities that own the rights to Harry Potter.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 修复全屏功能
+        document.getElementById('fullscreen-btn').addEventListener('click', function() {
+            const iframe = document.querySelector('.game-container iframe');
+            
+            try {
+                if (iframe.requestFullscreen) {
+                    iframe.requestFullscreen();
+                } else if (iframe.webkitRequestFullscreen) {
+                    iframe.webkitRequestFullscreen();
+                } else if (iframe.mozRequestFullScreen) {
+                    iframe.mozRequestFullScreen();
+                } else if (iframe.msRequestFullscreen) {
+                    iframe.msRequestFullscreen();
+                } else {
+                    // 后备方案 - 尝试对容器进行全屏
+                    const container = document.querySelector('.game-container');
+                    if (container.requestFullscreen) {
+                        container.requestFullscreen();
+                    } else if (container.webkitRequestFullscreen) {
+                        container.webkitRequestFullscreen();
+                    } else if (container.mozRequestFullScreen) {
+                        container.mozRequestFullScreen();
+                    } else if (container.msRequestFullscreen) {
+                        container.msRequestFullscreen();
+                    } else {
+                        console.log('Fullscreen API not supported');
+                        alert('Fullscreen mode is not supported in your browser');
+                    }
+                }
+            } catch (e) {
+                console.error('Fullscreen error:', e);
+                alert('Unable to enter fullscreen mode. Try using a different browser.');
+            }
+        });
+    </script>
+</body>
+</html>
